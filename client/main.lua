@@ -19,14 +19,14 @@ function DrawText3Ds(x, y, z, text)
 end
 
 Citizen.CreateThread(function()
-    Limeys = AddBlipForCoord(290.06, -961.77, 29.42)
+    Limeys = AddBlipForCoord(252.81, -1025.5, 29.54)
     SetBlipSprite (Limeys, 93)
     SetBlipDisplay(Limeys, 4)
     SetBlipScale  (Limeys, 0.7)
     SetBlipAsShortRange(Limeys, true)
     SetBlipColour(Limeys, 46)
     BeginTextCommandSetBlipName("STRING")
-    AddTextComponentSubstringPlayerName("Limey's")
+    AddTextComponentSubstringPlayerName("Cockteleria Lymei")
     EndTextCommandSetBlipName(Limeys)
 end) 
 
@@ -122,7 +122,7 @@ AddEventHandler("qb-limeysjob:CherryCocktail", function()
     if onDuty then
     	QBCore.Functions.TriggerCallback('qb-limeysjob:server:get:ingredientcherrycocktail', function(HasItems)  
     		if HasItems then
-				QBCore.Functions.Progressbar("pickup_sla", "Making a Cherry Cocktail..", 4000, false, true, {
+				QBCore.Functions.Progressbar("pickup_sla", "Haciendo un cocket de cerezas..", 4000, false, true, {
 					disableMovement = true,
 					disableCarMovement = true,
 					disableMouse = false,
@@ -140,16 +140,16 @@ AddEventHandler("qb-limeysjob:CherryCocktail", function()
                                 TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["cherry"], "remove")
 								TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["whiskey"], "remove")
 								TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["cherrycocktail"], "add")
-                    			QBCore.Functions.Notify("You made a Cherry Cocktail", "success")
+                    			QBCore.Functions.Notify("Has hecho un coctel de cereza!", "success")
 				end, function()
-					QBCore.Functions.Notify("Cancelled..", "error")
+					QBCore.Functions.Notify("Cancelado..", "error")
 				end)
 			else
-   				QBCore.Functions.Notify("You dont have the right stuff to make this", "error")
+   				QBCore.Functions.Notify("No tienes los objetos correctos para hacer esto", "error")
 			end
 		end)
 	else 
-		QBCore.Functions.Notify("You must be Clocked into work", "error")
+		QBCore.Functions.Notify("Tienes que fichar tu entrada antes", "error")
 	end
 end)
 RegisterNetEvent("qb-limeysjob:AppleCocktail")
@@ -157,7 +157,7 @@ AddEventHandler("qb-limeysjob:AppleCocktail", function()
     if onDuty then
     	QBCore.Functions.TriggerCallback('qb-limeysjob:server:get:ingredientapplecocktail', function(HasItems)  
     		if HasItems then
-				QBCore.Functions.Progressbar("pickup_sla", "Making an Apple Cocktail..", 4000, false, true, {
+				QBCore.Functions.Progressbar("pickup_sla", "Haciendo un coctel de Manzana..", 4000, false, true, {
 					disableMovement = true,
 					disableCarMovement = true,
 					disableMouse = false,
@@ -175,16 +175,16 @@ AddEventHandler("qb-limeysjob:AppleCocktail", function()
                                 TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["apple"], "remove")
 								TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["whiskey"], "remove")
 								TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["applecocktail"], "add")
-                    			QBCore.Functions.Notify("You made an Apple Cocktail", "success")
+                    			QBCore.Functions.Notify("HAs hecho un coctel de Manzana!", "success")
 				end, function()
-					QBCore.Functions.Notify("Cancelled..", "error")
+					QBCore.Functions.Notify("Cancelado..", "error")
 				end)
 			else
-   				QBCore.Functions.Notify("You dont have the right stuff to make this", "error")
+   				QBCore.Functions.Notify("No tienes los objetos correctos para hacer esto", "error")
 			end
 		end)
 	else 
-		QBCore.Functions.Notify("You must be Clocked into work", "error")
+		QBCore.Functions.Notify("Tienes que fichar tu entrada antes", "error")
 	end
 end)
 RegisterNetEvent("qb-limeysjob:BananaCocktail")
@@ -192,7 +192,7 @@ AddEventHandler("qb-limeysjob:BananaCocktail", function()
     if onDuty then
     	QBCore.Functions.TriggerCallback('qb-limeysjob:server:get:ingredientbananacocktail', function(HasItems)  
     		if HasItems then
-				QBCore.Functions.Progressbar("pickup_sla", "Making a Banana Cocktail..", 4000, false, true, {
+				QBCore.Functions.Progressbar("pickup_sla", "Haciendo un coctel de Platano..", 4000, false, true, {
 					disableMovement = true,
 					disableCarMovement = true,
 					disableMouse = false,
@@ -210,16 +210,16 @@ AddEventHandler("qb-limeysjob:BananaCocktail", function()
 								TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["whiskey"], "remove")
                                 TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["banana"], "remove")
 								TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["bananacocktail"], "add")
-                    			QBCore.Functions.Notify("You made a Banana Cocktail", "success")
+                    			QBCore.Functions.Notify("Has hecho un coctel de Platano", "success")
 				end, function()
-					QBCore.Functions.Notify("Cancelled..", "error")
+					QBCore.Functions.Notify("Cancelado..", "error")
 				end)
 			else
-   				QBCore.Functions.Notify("You dont have the right stuff to make this", "error")
+   				QBCore.Functions.Notify("No tienes los objetos correctos para hacer esto", "error")
 			end
 		end)
 	else 
-		QBCore.Functions.Notify("You must be Clocked into work", "error")
+		QBCore.Functions.Notify("Tienes que fichar tu entrada antes", "error")
 	end
 end)
 RegisterNetEvent("qb-limeysjob:KiwiCocktail")
@@ -227,7 +227,7 @@ AddEventHandler("qb-limeysjob:KiwiCocktail", function()
     if onDuty then
     	QBCore.Functions.TriggerCallback('qb-limeysjob:server:get:ingredientkiwicocktail', function(HasItems)  
     		if HasItems then
-				QBCore.Functions.Progressbar("pickup_sla", "Making a Kiwi Cocktail..", 4000, false, true, {
+				QBCore.Functions.Progressbar("pickup_sla", "Haciendo un coctel de Kiwi..", 4000, false, true, {
 					disableMovement = true,
 					disableCarMovement = true,
 					disableMouse = false,
@@ -245,16 +245,16 @@ AddEventHandler("qb-limeysjob:KiwiCocktail", function()
                                 TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["kiwi"], "remove")
 								TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["whiskey"], "remove")
 								TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["kiwicocktail"], "add")
-                    			QBCore.Functions.Notify("You made a Kiwi Cocktail", "success")
+                    			QBCore.Functions.Notify("Has hecho un cotel de Kiwi!", "success")
 				end, function()
-					QBCore.Functions.Notify("Cancelled..", "error")
+					QBCore.Functions.Notify("Cancelado..", "error")
 				end)
 			else
-   				QBCore.Functions.Notify("You dont have the right stuff to make this", "error")
+   				QBCore.Functions.Notify("No tienes los objetos correctos para hacer esto", "error")
 			end
 		end)
 	else 
-		QBCore.Functions.Notify("You must be Clocked into work", "error")
+		QBCore.Functions.Notify("Tienes que fichar tu entrada antes", "error")
 	end
 end)
 RegisterNetEvent("qb-limeysjob:ParadiseCocktail")
@@ -262,7 +262,7 @@ AddEventHandler("qb-limeysjob:ParadiseCocktail", function()
     if onDuty then
     	QBCore.Functions.TriggerCallback('qb-limeysjob:server:get:ingredientparadisecocktail', function(HasItems)  
     		if HasItems then
-				QBCore.Functions.Progressbar("pickup_sla", "Making a Paradise Cocktail..", 4000, false, true, {
+				QBCore.Functions.Progressbar("pickup_sla", "Haciendo un coctel Paraiso..", 4000, false, true, {
 					disableMovement = true,
 					disableCarMovement = true,
 					disableMouse = false,
@@ -294,16 +294,16 @@ AddEventHandler("qb-limeysjob:ParadiseCocktail", function()
                                 TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["lime"], "remove")
                                 TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["whiskey"], "remove")
 								TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["paradisecocktail"], "add")
-                    			QBCore.Functions.Notify("You made a Paradise Cocktail", "success")
+                    			QBCore.Functions.Notify("Has hecho un coctel Paraiso!", "success")
 				end, function()
-					QBCore.Functions.Notify("Cancelled..", "error")
+					QBCore.Functions.Notify("Cancelado..", "error")
 				end)
 			else
-   				QBCore.Functions.Notify("You dont have the right stuff to make this", "error")
+   				QBCore.Functions.Notify("No tienes los objetos correctos para hacer esto", "error")
 			end
 		end)
 	else 
-		QBCore.Functions.Notify("You must be Clocked into work", "error")
+		QBCore.Functions.Notify("Tienes que fichar tu entrada antes", "error")
 	end
 end)
 RegisterNetEvent("qb-limeysjob:CherryDrink")
@@ -311,7 +311,7 @@ AddEventHandler("qb-limeysjob:CherryDrink", function()
     if onDuty then
     	QBCore.Functions.TriggerCallback('qb-limeysjob:server:get:ingredientcherrydrink', function(HasItems)  
     		if HasItems then
-				QBCore.Functions.Progressbar("pickup_sla", "Making a Cherry Drink..", 4000, false, true, {
+				QBCore.Functions.Progressbar("pickup_sla", "Haciendo un zumo de cereza..", 4000, false, true, {
 					disableMovement = true,
 					disableCarMovement = true,
 					disableMouse = false,
@@ -329,14 +329,14 @@ AddEventHandler("qb-limeysjob:CherryDrink", function()
 								TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["cherrydrink"], "add")
                     			QBCore.Functions.Notify("You made a Cherry Drink", "success")
 				end, function()
-					QBCore.Functions.Notify("Cancelled..", "error")
+					QBCore.Functions.Notify("Cancelado..", "error")
 				end)
 			else
-   				QBCore.Functions.Notify("You dont have the right stuff to make this", "error")
+   				QBCore.Functions.Notify("No tienes los objetos correctos para hacer esto", "error")
 			end
 		end)
 	else 
-		QBCore.Functions.Notify("You must be Clocked into work", "error")
+		QBCore.Functions.Notify("Tienes que fichar tu entrada antes", "error")
 	end
 end)
 RegisterNetEvent("qb-limeysjob:LemonDrink")
@@ -362,14 +362,14 @@ AddEventHandler("qb-limeysjob:LemonDrink", function()
 								TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["lemondrink"], "add")
                     			QBCore.Functions.Notify("You made Rip-off Lemonade", "success")
 				end, function()
-					QBCore.Functions.Notify("Cancelled..", "error")
+					QBCore.Functions.Notify("Cancelado..", "error")
 				end)
 			else
-   				QBCore.Functions.Notify("You dont have the right stuff to make this", "error")
+   				QBCore.Functions.Notify("No tienes los objetos correctos para hacer esto", "error")
 			end
 		end)
 	else 
-		QBCore.Functions.Notify("You must be Clocked into work", "error")
+		QBCore.Functions.Notify("Tienes que fichar tu entrada antes", "error")
 	end
 end)
 RegisterNetEvent("qb-limeysjob:LimeDrink")
@@ -395,14 +395,14 @@ AddEventHandler("qb-limeysjob:LimeDrink", function()
 								TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["limedrink"], "add")
                     			QBCore.Functions.Notify("You made a Lime Drink", "success")
 				end, function()
-					QBCore.Functions.Notify("Cancelled..", "error")
+					QBCore.Functions.Notify("Cancelado..", "error")
 				end)
 			else
-   				QBCore.Functions.Notify("You dont have the right stuff to make this", "error")
+   				QBCore.Functions.Notify("No tienes los objetos correctos para hacer esto", "error")
 			end
 		end)
 	else 
-		QBCore.Functions.Notify("You must be Clocked into work", "error")
+		QBCore.Functions.Notify("Tienes que fichar tu entrada antes", "error")
 	end
 end)
 RegisterNetEvent("qb-limeysjob:OrangeDrink")
@@ -428,14 +428,14 @@ AddEventHandler("qb-limeysjob:OrangeDrink", function()
 								TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["orangedrink"], "add")
                     			QBCore.Functions.Notify("You made a Orange Drink", "success")
 				end, function()
-					QBCore.Functions.Notify("Cancelled..", "error")
+					QBCore.Functions.Notify("Cancelado..", "error")
 				end)
 			else
-   				QBCore.Functions.Notify("You dont have the right stuff to make this", "error")
+   				QBCore.Functions.Notify("No tienes los objetos correctos para hacer esto", "error")
 			end
 		end)
 	else 
-		QBCore.Functions.Notify("You must be Clocked into work", "error")
+		QBCore.Functions.Notify("Tienes que fichar tu entrada antes", "error")
 	end
 end)
 RegisterNetEvent("qb-limeysjob:WatermelonDrink")
@@ -461,14 +461,14 @@ AddEventHandler("qb-limeysjob:WatermelonDrink", function()
 								TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["watermelondrink"], "add")
                     			QBCore.Functions.Notify("You made a Watermelon Drink", "success")
 				end, function()
-					QBCore.Functions.Notify("Cancelled..", "error")
+					QBCore.Functions.Notify("Cancelado..", "error")
 				end)
 			else
-   				QBCore.Functions.Notify("You dont have the right stuff to make this", "error")
+   				QBCore.Functions.Notify("No tienes los objetos correctos para hacer esto", "error")
 			end
 		end)
 	else 
-		QBCore.Functions.Notify("You must be Clocked into work", "error")
+		QBCore.Functions.Notify("Tienes que fichar tu entrada antes", "error")
 	end
 end)
 

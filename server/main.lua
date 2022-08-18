@@ -20,19 +20,19 @@ AddEventHandler("qb-limeysjob:bill:player", function(playerId, amount)
                             ['sender'] = biller.PlayerData.charinfo.firstname
                         })
                         TriggerClientEvent('qb-phone:RefreshPhone', billed.PlayerData.source)
-                        TriggerClientEvent('QBCore:Notify', source, 'Invoice Successfully Sent', 'success')
-                        TriggerClientEvent('QBCore:Notify', billed.PlayerData.source, 'New Invoice Received')
+                        TriggerClientEvent('QBCore:Notify', source, 'Factura enviada correctamente', 'success')
+                        TriggerClientEvent('QBCore:Notify', billed.PlayerData.source, 'Nueva factura recibida')
                     else
-                        TriggerClientEvent('QBCore:Notify', source, 'Must Be A Valid Amount Above 0', 'error')
+                        TriggerClientEvent('QBCore:Notify', source, 'Tiene que ser una cifra valida superior a 0', 'error')
                     end
                 else
-                    TriggerClientEvent('QBCore:Notify', source, 'You Cannot Bill Yourself', 'error')
+                    TriggerClientEvent('QBCore:Notify', source, 'No te puedes facturar a ti mismo', 'error')
                 end
             else
-                TriggerClientEvent('QBCore:Notify', source, 'Player Not Online', 'error')
+                TriggerClientEvent('QBCore:Notify', source, 'El jugador no esta en linea', 'error')
             end
         else
-            TriggerClientEvent('QBCore:Notify', source, 'No Access', 'error')
+            TriggerClientEvent('QBCore:Notify', source, 'Sin acceso', 'error')
         end
 end)
 
