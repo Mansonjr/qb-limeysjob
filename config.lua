@@ -1,9 +1,9 @@
 Config = {}
 
-Config.PolyZoneTest = false --SET TO FALSE IF USING ON LIVE SERVER
+Config.PolyZoneTest = true --SET TO FALSE IF USING ON LIVE SERVER
 
 Config.CandyItems = {
-label = "Limeys Candy",
+label = "Chuches Limeys",
     slots = 3,
     items = {
         [1] = {
@@ -35,7 +35,7 @@ label = "Limeys Candy",
 
 --DONUT SHOP
 Config.DonutItems = {
-label = "Limeys Donuts",
+label = "Donuts Limeys",
     slots = 2,
     items = {
         [1] = {
@@ -59,7 +59,7 @@ label = "Limeys Donuts",
 
 --REGISTER SHOP
 Config.Items = {
-label = "Limeys Ingredients",
+label = "Ingredientes Limeys",
     slots = 11,
     items = {
         [1] = {
